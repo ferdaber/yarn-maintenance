@@ -1,0 +1,49 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "trailingComma": "es5",
+    "tabWidth": 2
+  },
+  "name": "yarn-maintenance",
+  "author": "Ferdy Budhidharma",
+  "module": "dist/yarn-maintenance.esm.js",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/lodash-es": "^4.17.3",
+    "husky": "^4.2.3",
+    "tsdx": "^0.13.1",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@yarnpkg/lockfile": "^1.1.0",
+    "chalk": "^4.0.0",
+    "commander": "^5.0.0",
+    "lodash-es": "^4.17.15",
+    "semver": "^7.2.1"
+  }
+}
